@@ -1,25 +1,53 @@
-import logo from './logo.svg';
+
 import './App.css';
+import AppUi from './AppUi';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <AppUi/>
     </div>
   );
 }
 
 export default App;
+
+
+// // clearData = () => {
+// //   this.setState({
+// //     id: 0,
+// //     name: "",
+// //     lname: "",
+// //   });
+// // };
+
+// // else {
+// //   alert("Enter Employee Details.");
+// // }
+
+// // this.clearData();
+// // };
+
+
+
+// import React from "react";
+// import thunk from 'redux-thunk';
+// import {Provider} from 'react-redux';
+// import {applyMiddleware, combineReducers, createStore} from 'redux';
+// import reducers from './app/reducers';
+// import Note from "./app/maincontainer/Note";
+ 
+// const rootReducer = combineReducers({...reducers});
+// const store = createStore(rootReducer, applyMiddleware(thunk));
+
+
+// function App() {
+//   return (
+//     <Provider store={store}>
+//       <Note />
+//     </Provider>
+//   );
+// } 
+// export default App;
+
+

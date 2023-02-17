@@ -3,11 +3,31 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import thunk from 'redux-thunk'
+import {reducer} from './Reduscer/Reducer'
+
+
+import { legacy_createStore as createStore,applyMiddleware} from 'redux';
+
+
+import { Provider } from 'react-redux';
+
+// const middlewares = [thunk];
+// if (process.env.NODE_ENV !== 'production') {
+//   const { logger } = require('redux-logger');
+//   middlewares.push(logger);
+// }
+
+const store=createStore(reducer,applyMiddleware(thunk))
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+   <Provider store={store}>
+   <App />
+   </Provider>
   </React.StrictMode>
 );
 
